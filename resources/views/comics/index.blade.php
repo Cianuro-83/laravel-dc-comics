@@ -1,1 +1,5 @@
-<h1>prova</h1>
+@extends('layouts.app')
+
+@section('content')
+<h1 class="py-3">INDEX</h1>
+@endsection
