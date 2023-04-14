@@ -35,7 +35,7 @@
                         </h1>
 
                         <p class="col-md-8 fs-4">Click on the button below to start the navigation</p>
-                        <a href="https://packagist.org/packages/pacificdev/laravel_9_preset" class="btn btn-success fw-bolder text-warning btn-lg text-uppercase" type="button">start navigation</a>
+                        <a href="{{ route('comics.index'}}" class="btn btn-success fw-bolder text-warning btn-lg text-uppercase" type="button">start navigation</a>
                     </div>
                 </div>
             </div>
