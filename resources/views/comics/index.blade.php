@@ -22,7 +22,7 @@
             <tr>
               <th scope="row">{{$comic->id}}</th>
               <td>{{$comic->title}}</td>
-              <td>{{$comic->description}}</td>
+              <td class=""><p class="truncate">{{$comic->description}}</p></td>
               <td><img src="{{$comic->thumb}}" alt="" class="scb-thumb"></td>
               <td>{{$comic->price}}</td>
               <td>{{$comic->series}}</td>

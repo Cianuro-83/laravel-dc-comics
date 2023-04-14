@@ -5,3 +5,10 @@ img {
 .scb-thumb {
     width: 50px;
 }
+
+.truncate {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
