@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="bg-light">
+<div class="">
     <div class="container">
         <div class="row">
             <div class="col-12">

@@ -16,6 +16,19 @@ class ComicController extends Controller
         $comics = Comic::all();
     
         return view("comics.index", compact('comics'));
+
+    }
+
+       /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Comic $comic)
+    {
+        // $comic = Comic::findOrFail($id);
+        return view('comics.show', compact('comic'));
     }
 
     /**
@@ -25,7 +38,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -39,17 +52,7 @@ class ComicController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
+ 
     /**
      * Show the form for editing the specified resource.
      *

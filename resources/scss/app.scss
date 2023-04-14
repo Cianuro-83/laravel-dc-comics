@@ -12,3 +12,12 @@ img {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+body {
+    background-color: black;
+    color: white;
+}
+.scb-row {
+    display: flex;
+    align-items: center;
+}
