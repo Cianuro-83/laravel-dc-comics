@@ -5,55 +5,52 @@
     <h1 class="py-3 text-uppercase text-center font-weight-bolder text-warning">aggiungi un nuovo comics</h1>
 <div class="row">
     <div class="col-12">
-        <form>
+        <form action="{{route("comics.store")}}" method="POST">
+          @csrf
             <div class="row mb-3">
-              <label for="inputEmail3" class="col-sm-2 col-form-label">TITOLO</label>
+              <label for="title" class="col-sm-2 col-form-label">TITOLO</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputComic1">
+                <input type="text" class="form-control" id="title" name="title">
               </div>
             </div>
 
             <div class="row mb-3">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">THUMB</label>
+                <label for="thumb" class="col-sm-2 col-form-label">THUMB</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputComic2">
+                  <input type="text" class="form-control" id="thumb" name="thumb">
                 </div>
               </div>
 
               <div class="row mb-3">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">PREZZO</label>
+                <label for="price" class="col-sm-2 col-form-label">PREZZO</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputComic3">
+                  <input type="text" class="form-control" id="price" name="price">
                 </div>
               </div>
   
               <div class="row mb-3">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">SERIE</label>
+                  <label for="series" class="col-sm-2 col-form-label">SERIE</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputComic4">
+                    <input type="text" class="form-control" id="series" name="series">
                   </div>
                 </div>
 
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">DATA DI USCITA</label>
+                    <label for="sale-date" class="col-sm-2 col-form-label">DATA DI USCITA</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputComic5">
+                      <input type="text" class="form-control" id="sale-date" name="sale_date">
                     </div>
                   </div>
       
                   <div class="row mb-3">
-                      <label for="inputEmail3" class="col-sm-2 col-form-label">TIPOLOGIA</label>
+                      <label for="type" class="col-sm-2 col-form-label">TIPOLOGIA</label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputComic6">
+                        <input type="text" class="form-control" id="type" name="type">
                       </div>
                     </div>
-                   
-                   
-                   
-                   
                     <div class="form-floating mb-3">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="imputComics7" style="height: 200px" ></textarea>
-                        <label class="text-black" for="floatingTextarea2Disabled">INSERISCI DESCRIZIONE</label>
+                        <textarea class="form-control" placeholder="Leave a comment here" id="description" name="description" style="height: 200px" ></textarea>
+                        <label class="text-black" for="description">INSERISCI DESCRIZIONE</label>
                       </div>
             
             <button type="submit" class="btn btn-primary">AGGIUNGI NUOVO COMICS</button>
