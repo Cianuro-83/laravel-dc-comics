@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="py-3 text-center fw-bolder">INDEX</h1>
+<h1 class="py-3 text-center fw-bolder text-warning">COMICS LIST'S</h1>
 <div class="container">
     <table class="table">
         <thead>
