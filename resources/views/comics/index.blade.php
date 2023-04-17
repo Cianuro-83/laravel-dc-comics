@@ -14,7 +14,7 @@
             <th class="text-white text-uppercase" scope="col">Serie</th>
             <th class="text-white text-uppercase" scope="col">Data uscita</th>
             <th class="text-white text-uppercase" scope="col">Tipo</th>
-            <th class="text-white text-uppercase" scope="col">Anteprima</th>
+            <th class="text-white text-uppercase" scope="col">Azioni</th>
           </tr>
         </thead>
         <tbody>
@@ -28,8 +28,25 @@
               <td class="text-white">{{$comic->series}}</td>
               <td class="text-white">{{$comic->sale_date}}</td>
               <td class="text-white">{{$comic->type}}</td>
-              <td> <a href="{{route('comics.show',$comic )}}">
-                  <button type="button" class="btn btn-outline-success">SEE MORE</button></a></td>
+              <td> 
+                <div class="mb-3">
+                  <a href="{{route('comics.edit',$comic )}}">
+                  <button type="button" class="btn btn-outline-warning">MODIFICA</button></a>
+
+                </div>
+                <div>
+                  <a href="{{route('comics.show',$comic )}}">
+                    <button type="button" class="btn btn-outline-success">DETTAGLI</button></a>
+                    
+                  </div>
+                  
+                  
+                  
+                  
+                  <td> 
+              </td>
+              </td>
+
               
             </tr>
             @endforeach
