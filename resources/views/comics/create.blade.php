@@ -54,13 +54,11 @@
                       </div>
             {{-- CHECKBOX --}}
                       <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="checkbox">
+                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="checkbox">
                         <label class="form-check-label" for="flexCheckDefault">
                           RESTA NELLA PAGINA DI CREAZIONE
                         </label>
                       </div>
-
-
             <button type="submit" class="btn btn-primary">AGGIUNGI NUOVO COMICS</button>
           </form>
     </div>

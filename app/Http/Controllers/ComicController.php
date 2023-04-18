@@ -51,7 +51,7 @@ class ComicController extends Controller
     {
         $data= $request->all();
 
-        dd($request);
+    // dd($data);
 
         $new_c= new Comic();
 
@@ -64,8 +64,10 @@ class ComicController extends Controller
         $new_c->type= $data['type'];
 
         $new_c->save();
-
-        return to_route('comics.show', $new_c);
+        if (isset($data['checkbox']))
+              return to_route('comics.create');
+        else
+             return to_route('comics.show', $new_c);
     }
 
  
