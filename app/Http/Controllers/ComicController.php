@@ -51,6 +51,8 @@ class ComicController extends Controller
     {
         $data= $request->all();
 
+        dd($request);
+
         $new_c= new Comic();
 
         $new_c->title= $data['title'];

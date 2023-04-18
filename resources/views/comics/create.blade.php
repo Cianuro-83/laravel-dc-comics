@@ -52,7 +52,15 @@
                         <textarea class="form-control" placeholder="Leave a comment here" id="description" name="description" style="height: 200px" ></textarea>
                         <label class="text-black" for="description">INSERISCI DESCRIZIONE</label>
                       </div>
-            
+            {{-- CHECKBOX --}}
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="checkbox">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          RESTA NELLA PAGINA DI CREAZIONE
+                        </label>
+                      </div>
+
+
             <button type="submit" class="btn btn-primary">AGGIUNGI NUOVO COMICS</button>
           </form>
     </div>
