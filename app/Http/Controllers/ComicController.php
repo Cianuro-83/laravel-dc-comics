@@ -27,7 +27,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        // $comic = Comic::findOrFail($id);
+        
         return view('comics.show', compact('comic'));
     }
 
@@ -108,8 +108,9 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return to_route('comics.index');
     }
 }
