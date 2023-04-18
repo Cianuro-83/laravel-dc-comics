@@ -117,4 +117,14 @@ class ComicController extends Controller
         $comic->delete();
         return to_route('comics.index');
     }
+
+    public function destroyAll()
+    {
+        $comics= Comic::all();
+
+        Comic::truncate();
+
+
+        return to_route('comics.index');
+    }
 }

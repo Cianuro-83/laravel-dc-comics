@@ -3,6 +3,13 @@
 @section('content')
 <h1 class="py-3 text-center fw-bolder text-warning">COMICS LIST'S</h1>
 <div class="container">
+  <div class="my-4 d-flex justify-content-end">
+    <form action="{{route('comics.destroy.all')}}" method="POST">
+      @csrf
+      @method('DELETE')
+      <input type="submit" class="btn btn-danger btn fw-bolder text-end" value="CANCELLA TUTTO">
+    </form>
+</div>     
     <table class="table">
         <thead>
           <tr>
