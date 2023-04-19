@@ -10,46 +10,46 @@
             <div class="row mb-3">
               <label for="title" class="col-sm-2 col-form-label">TITOLO</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="title" name="title">
+                <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}">
               </div>
             </div>
 
             <div class="row mb-3">
                 <label for="thumb" class="col-sm-2 col-form-label">THUMB</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="thumb" name="thumb">
+                  <input type="text" class="form-control" id="thumb" name="thumb" value="{{ old('thumb') }}">
                 </div>
               </div>
 
               <div class="row mb-3">
                 <label for="price" class="col-sm-2 col-form-label">PREZZO</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="price" name="price">
+                  <input type="text" class="form-control" id="price" name="price" value="{{ old('price') }}">
                 </div>
               </div>
   
               <div class="row mb-3">
                   <label for="series" class="col-sm-2 col-form-label">SERIE</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="series" name="series">
+                    <input type="text" class="form-control" id="series" name="series" value="{{ old('series') }}">
                   </div>
                 </div>
 
                 <div class="row mb-3">
                     <label for="sale-date" class="col-sm-2 col-form-label">DATA DI USCITA</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="sale-date" name="sale_date">
+                      <input type="text" class="form-control" id="sale-date" name="sale_date" value="{{ old('sale_date') }}">
                     </div>
                   </div>
       
                   <div class="row mb-3">
                       <label for="type" class="col-sm-2 col-form-label">TIPOLOGIA</label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" id="type" name="type">
+                        <input type="text" class="form-control" id="type" name="type" value="{{ old('type') }}">
                       </div>
                     </div>
                     <div class="form-floating mb-3">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="description" name="description" style="height: 200px" ></textarea>
+                        <textarea class="form-control" placeholder="Leave a comment here" id="description" name="description" style="height: 200px" >{{ old('description') }}</textarea>
                         <label class="text-black" for="description">INSERISCI DESCRIZIONE</label>
                       </div>
             {{-- CHECKBOX --}}
