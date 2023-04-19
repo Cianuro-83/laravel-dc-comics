@@ -58,7 +58,7 @@
                 <div class="row mb-3">
                     <label for="sale-date" class="col-sm-2 col-form-label">DATA DI USCITA</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control @error('sale_date') is-invalid @enderror" id="sale-date" name="sale_date" value="{{ old('sale_date') }}">
+                      <input type="date" class="form-control @error('sale_date') is-invalid @enderror" id="sale-date" name="sale_date" value="{{ old('sale_date') }}">
                       @error('sale_date')
                     <div class="invalid-feedback fw-bold">
                       {{ $message }}
