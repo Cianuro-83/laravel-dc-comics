@@ -39,7 +39,11 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('comics.create');
+        $types = [
+            'comic book'=>'Comic Book',
+            'graphic novel'=>'Graphic Novel'
+        ];
+        return view('comics.create', compact('types'));
     }
 
     /**
@@ -94,7 +98,11 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        return view('comics.edit', compact('comic'));
+        $types = [
+            'comic book'=>'Comic Book',
+            'graphic novel'=>'Graphic Novel'
+        ];
+        return view('comics.edit', compact('comic', 'types'));
     }
 
     /**

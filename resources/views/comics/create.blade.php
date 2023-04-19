@@ -68,16 +68,37 @@
                   </div>
       
                   <div class="row mb-3">
+            
                       <label for="type" class="col-sm-2 col-form-label">TIPOLOGIA</label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control @error('type') is-invalid @enderror" id="type" name="type" value="{{ old('type') }}">
-                        @error('type')
-                    <div class="invalid-feedback fw-bold">
-                      {{ $message }}
-                    </div>
-                  @enderror
+                      <select class="scb-select form-select form-select-md mb-1 @error('type') is-invalid @enderror" aria-label="Default select example" name="type" id="type">
+                        <option selected>Scegli tra le tipologie disponibili</option>
+                        @foreach ($types as $key=>$value)
+                        <option @selected( old('type') == $key ) value="{{$key}}">{{$value}}</option>
+                        @endforeach
+                      </select>
+                      @error('type')
+                      <div class="scb-sel invalid-feedback fw-bold">
+                        {{ $message }}
                       </div>
-                    </div>
+                    @enderror
+        
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <div class="form-floating mb-3">
                         <textarea class="form-control @error('description') is-invalid @enderror" placeholder="Leave a comment here" id="description" name="description" style="height: 200px" >{{ old('description') }}</textarea>
                         @error('description')
