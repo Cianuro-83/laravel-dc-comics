@@ -65,21 +65,24 @@ class ComicController extends Controller
 
     // dd($data);
 
-        $new_c= new Comic();
+        // $new_c= new Comic();
 
-        $new_c->title= $data['title'];
-        $new_c->description= $data['description'];
-        $new_c->thumb= $data['thumb'];
-        $new_c->price= $data['price'];
-        $new_c->series= $data['series'];
-        $new_c->sale_date= $data['sale_date'];
-        $new_c->type= $data['type'];
+        // $new_c->title= $data['title'];
+        // $new_c->description= $data['description'];
+        // $new_c->thumb= $data['thumb'];
+        // $new_c->price= $data['price'];
+        // $new_c->series= $data['series'];
+        // $new_c->sale_date= $data['sale_date'];
+        // $new_c->type= $data['type'];
 
-        $new_c->save();
+        // $new_c->save();
+
+        $new_comic=Comic::create($data);
+
         if (isset($data['checkbox']))
               return to_route('comics.create');
         else
-             return to_route('comics.show', $new_c);
+             return to_route('comics.show', $new_comic);
     }
 
  
@@ -116,15 +119,17 @@ class ComicController extends Controller
                       ],
         ]);
 
-        $comic->title= $data['title'];
-        $comic->description= $data['description'];
-        $comic->thumb= $data['thumb'];
-        $comic->price= $data['price'];
-        $comic->series= $data['series'];
-        $comic->sale_date= $data['sale_date'];
-        $comic->type= $data['type'];
+        // $comic->title= $data['title'];
+        // $comic->description= $data['description'];
+        // $comic->thumb= $data['thumb'];
+        // $comic->price= $data['price'];
+        // $comic->series= $data['series'];
+        // $comic->sale_date= $data['sale_date'];
+        // $comic->type= $data['type'];
 
-        $comic->save();
+        // $comic->save();
+
+        $comic->update($data);
 
         return to_route('comics.show', $comic);
     }
